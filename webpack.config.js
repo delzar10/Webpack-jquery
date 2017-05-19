@@ -1,9 +1,11 @@
+var path = require('path');
+
 module.exports = {
   // our index file, if you want multiple bundles (e.g. visitor.js and admin.js)
   // turn this into an object with keys for each bundle
   entry: './src/index.js',
   output: {
-    path: './public',
+    path:  path.join(__dirname, 'public'),
     // if you have multiple bundles as described ^ make sure to include [name]
     // (e.g. '[name].bundle.js)
     filename: 'bundle.js'
